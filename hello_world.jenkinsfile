@@ -11,5 +11,12 @@ pipeline {
                 echo 'Hello Test stage'
             }
         }
+        stage ('Deploy') {
+            steps {
+                snDevOpsStep()
+                snDevOpsChange()
+                echo 'Hello Deploy stage'
+            }
+        }
     }
 }
